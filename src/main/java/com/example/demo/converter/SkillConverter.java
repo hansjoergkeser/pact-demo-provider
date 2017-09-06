@@ -14,7 +14,6 @@ public class SkillConverter {
     }
 
     public static SkillDto entityToDto(Skill skill){
-        SkillDto SkillDto= new SkillDto(skill.getSkillId(), skill.getSkillName());
-        return SkillDto;
+        return new SkillDto(skill.getSkillId(), skill.getSkillName());
     }
 }

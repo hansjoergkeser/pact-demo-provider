@@ -11,10 +11,10 @@ import java.util.List;
 @Entity
 public class User implements Serializable{
 
-    @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer userId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
+	private Integer userId;
     @Column
     private String userName;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

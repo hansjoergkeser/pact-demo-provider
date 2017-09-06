@@ -7,10 +7,10 @@ import javax.persistence.*;
  */
 @Entity
 public class Skill {
-    @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer skillId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
+	private Integer skillId;
     @Column
     private String skillName;
     @ManyToOne
