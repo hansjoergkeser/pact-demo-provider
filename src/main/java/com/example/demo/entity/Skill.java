@@ -16,10 +16,11 @@ public class Skill {
     @ManyToOne
     private User user;
 
-    public Skill(String java) {
-    }
+    public Skill(String skillName) {
+		this.skillName = skillName;
+	}
 
-    public Integer getSkillId() {
+	public Integer getSkillId() {
         return skillId;
     }
 
