@@ -7,19 +7,20 @@ import javax.persistence.*;
  */
 @Entity
 public class Skill {
-    @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer skillId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
+	private Integer skillId;
     @Column
     private String skillName;
     @ManyToOne
     private User user;
 
-    public Skill(String java) {
-    }
+    public Skill(String skillName) {
+		this.skillName = skillName;
+	}
 
-    public Integer getSkillId() {
+	public Integer getSkillId() {
         return skillId;
     }
 
