@@ -1,6 +1,9 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is the sample web app from:
+https://dzone.com/articles/java-8-springboot-angularjs-bootstrap-springdata-j
+
+and modified for the purpose to demonstrate CDCT with Pact
 
 ### What is this repository for? ###
 
