@@ -16,6 +16,7 @@ import java.util.List;
 @RequestMapping("/user")
 @RestController
 public class UserController {
+
 	@Autowired
 	UserService userService;
 
@@ -35,4 +36,5 @@ public class UserController {
 	public void saveUser(@RequestBody UserDto userDto) {
 		userService.saveUser(userDto);
 	}
+
 }
