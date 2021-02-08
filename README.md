@@ -1,32 +1,36 @@
-# README #
+# Pact Demo Provider
 
-This is the sample web app from:
+<a href="https://github.com/hansjoergkeser/pact-demo-consumer/actions?query=workflow%3A%22Java+CI+with+Maven">
+<img alt="GitHub Actions status" 
+src="https://github.com/actions/cache/workflows/Tests/badge.svg?branch=main&event=push">
+</a>
+
+This is the sample web app from: <br>
 https://dzone.com/articles/java-8-springboot-angularjs-bootstrap-springdata-j
 
-and modified for the purpose to demonstrate CDCT with Pact
+and slightly modified for the purpose to demonstrate <br>
+Consumer Driven Contract Testing `CDCT` with [Pact](https://pact.io/)
 
-### What is this repository for? ###
+## Used frameworks & plugins
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+- [Spring Boot](https://spring.io/guides/gs/spring-boot/)
+- [Spring MVC](https://spring.io/guides/gs/serving-web-content/)
+- springdoc-openapi with [Swagger UI](https://swagger.io/tools/swagger-ui/)
+- [Lombok](https://projectlombok.org/) to create DTOs
+  <br>(for usage in IntelliJ Idea, install [Lombok Plugin](https://projectlombok.org/setup/intellij))
 
-### How do I get set up? ###
+## Start service
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+after first checkout/cloning the project, execute in terminal:
 
-### Contribution guidelines ###
+```yaml
+mvn clean install -U
+mvn spring-boot:run
+```
 
-* Writing tests
-* Code review
-* Other guidelines
+> Note: Service runs on localhost:9090 (see or configure `server.port` in application.properties)
 
-### Who do I talk to? ###
+### pact-demo-consumer
 
-* Repo owner or admin
-* Other community or team contact
+Find the according consumer service here: <br>
+https://github.com/hansjoergkeser/pact-demo-consumer

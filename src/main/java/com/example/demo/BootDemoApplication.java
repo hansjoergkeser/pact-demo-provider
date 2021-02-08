@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
 import java.util.Arrays;
+import java.util.List;
 
 @SpringBootApplication
 public class BootDemoApplication {
@@ -20,11 +21,14 @@ public class BootDemoApplication {
 	}
 
 	@PostConstruct
-	public void setupDbWithData(){
-		User user = new User("Ashish", null);
-		user.setSkills(Arrays.asList(new Skill("java"), new Skill("js")));
-		userRepository.save(user);
-		user = new User("Hajo", Arrays.asList(new Skill("Pact"), new Skill("Watching Cat Videos")));
-		userRepository.save(user);
+	public void setupDbWithData() {
+		User user1 = new User("Ashish", null);
+		user1.setSkills(Arrays.asList(new Skill("java"), new Skill("js")));
+//		userRepository.save(user);
+
+		User user2 = new User("Hajo", Arrays.asList(new Skill("Pact"), new Skill("Watching Cat Videos")));
+//		userRepository.save(user);
+
+		userRepository.saveAll(List.of(user1, user2));
 	}
 }
