@@ -10,3 +10,7 @@ input.custom-width{
 input.spacing{
     margin-right: 5px;
 }
+.aligncenter {
+    text-align: center;
+    visibility: hidden;
+}

@@ -11,16 +11,19 @@
         <label>User</label> <input type="text" ng-model="userDto.userName" class="input-sm spacing"/>
         <label>Skills</label> <input type="text" ng-model="skills" ng-list class="input-sm custom-width spacing"
                                      placeholder="use comma to separate skills"/>
-        <button ng-click="saveUser()" class="btn btn-sm btn-info">Save User</button>
+        <button ng-click="saveUser()" class="btn btn-sm btn-info"
+                onclick="document.getElementById('purrrfect').style.visibility = 'visible';">Save User
+        </button>
     </div>
-    <hr/>
-    <div class="row">
-        <p>{{allUsers | json}}</p>
-    </div>
-    <hr/>
+    <!--    <hr/>-->
+    <!--    <div class="row">-->
+    <!--        <p>{{allUsers | json}}</p>-->
+    <!--    </div>-->
+    <!--    <hr/>-->
     <div class="row" ng-repeat="user in allUsers">
         <div class="">
-            <h3>{{user.userName}}</h3>
+            <h3>User: {{user.userName}}</h3>
+            <span>Skills: </span>
             <span ng-repeat="skill in user.skillDtos" class="spacing">{{skill.skillName}}</span>
         </div>
     </div>
@@ -31,6 +34,11 @@
 <script src="js/app/app.js"></script>
 <script src="js/app/UserController.js"></script>
 <script src="js/app/UserService.js"></script>
+
+<p class="aligncenter">
+    <img id="purrrfect" src="pics/purrrfect.jpg" alt="purrrfect cat image"/>
+</p>
+
 <link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
 <link rel="stylesheet" href="css/app/app.css"/>
 </html>
