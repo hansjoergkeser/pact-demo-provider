@@ -7,7 +7,7 @@
   },
   "interactions": [
     {
-      "description": "getAllUsers test interaction response for user with: userId = 101",
+      "description": "getAllUsers test interaction response for user with userId = 101",
       "request": {
         "method": "GET",
         "path": "/user/getAllUsers"

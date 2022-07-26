@@ -3,11 +3,14 @@ package com.example.demo.controller;
 import com.example.demo.dto.UserDto;
 import com.example.demo.service.UserService;
 import com.example.demo.utils.Constants;
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by ashish on 13/5/17.
@@ -22,7 +25,7 @@ public class UserController {
 
 	@RequestMapping(Constants.GET_USER_BY_ID)
 	public UserDto getUserById(@PathVariable Integer userId) {
-		log.info("Incoming request to getUserById + " + userId);
+		log.info("Incoming request to getUserById: " + userId);
 		return userService.getUserById(userId);
 	}
 	

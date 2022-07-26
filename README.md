@@ -30,6 +30,12 @@ mvn spring-boot:run
 
 > Note: Service runs on localhost:8080 (see or configure `server.port` in application.properties)
 
+Example requests to provider service:
+<br>
+http://localhost:8080/user/getAllUsers
+<br>
+http://localhost:8080/user/getUser/1
+
 ### pact-demo-consumer
 
 Find the according consumer service here: <br>
