@@ -21,8 +21,7 @@ public class BootDemoApplication {
 	@PostConstruct
 	public void setupDbWithData() {
 		User user = new User("Hajo", Arrays.asList(
-				new Skill("Cats"), new Skill("Watching Cat Videos"),
-				new Skill("Pact"), new Skill("Writing Pact Tests")
+				new Skill("Watching Cat Videos"), new Skill("Writing Pact Tests")
 		));
 		userRepository.save(user);
 	}
