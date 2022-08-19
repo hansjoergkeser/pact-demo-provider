@@ -1,6 +1,5 @@
 package com.example.demo.dto;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,15 +8,12 @@ import java.util.List;
 public class UserDto {
     Integer userId;
     String userName;
-    List<SkillDto> skillDtos= new ArrayList<>();
+    List<SkillDto> skillDtos;
 
     public UserDto(Integer userId, String userName, List<SkillDto> skillDtos) {
         this.userId = userId;
         this.userName = userName;
         this.skillDtos = skillDtos;
-    }
-
-    public UserDto() {
     }
 
     public Integer getUserId() {

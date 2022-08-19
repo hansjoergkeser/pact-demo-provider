@@ -1,26 +1,37 @@
 package com.example.demo.entity;
 
-import javax.persistence.*;
 import java.io.Serializable;
-import java.util.LinkedList;
 import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  * Created by ashish on 13/5/17.
  */
 @Entity
-public class User implements Serializable{
+public class User implements Serializable {
 
     private static final long serialVersionUID = 0x62A6DA99AABDA8A8L;
-	
-	@Column
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Id
-	private Integer userId;
+
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer userId;
+
     @Column
     private String userName;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Skill> skills= new LinkedList<>();
+    private List<Skill> skills;
+
+    public User() {
+    }
 
     public Integer getUserId() {
         return userId;
@@ -44,9 +55,6 @@ public class User implements Serializable{
 
     public void setSkills(List<Skill> skills) {
         this.skills = skills;
-    }
-
-    public User() {
     }
 
     public User(String userName, List<Skill> skills) {
